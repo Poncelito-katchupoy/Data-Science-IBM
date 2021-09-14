@@ -85,7 +85,7 @@ def build_scatter(site_dropdown,slider_range):
         
         #Display all values for the variable
         title_scatter = f"Payload and Booster Versions for site: {site_dropdown}"
-        fig = px.scatter(dropdown_scatter,x="Payload Mass (kg)", y="class", title=title_scatter)
+        fig = px.scatter(dropdown_scatter,x="Payload Mass (kg)", y="class",color="Booster Version Category", title=title_scatter)
         return fig
     else:
         dropdown_scatter1= dropdown_scatter[dropdown_scatter['Launch Site'] == site_dropdown]
